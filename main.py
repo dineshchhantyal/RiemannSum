@@ -42,7 +42,7 @@ class Riemaan:
     def __init__(self, y:str, a:int , b:int, n: int, method: str):
         self.equation = y
         self.x = []
-        self.y = [] 
+        self.y = y 
         self.a = a
         self.b = b
         self.n = n
@@ -51,11 +51,15 @@ class Riemaan:
         self.ans = 0
         self.dx = (b - a) / n
         self.calculate_x_y()
+        
     def show_values(self):
         print("x", self.x)
         print("y", self.y)
         print("a", self.a)
         print("b", self.b)
+        print(self)
+    def f(self, x):
+        return eval(self.equation)
     def calculate_x_y(self):
         self.x = [1,2,3]
         self.y = [2,3,4]
